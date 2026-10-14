@@ -1,0 +1,77 @@
+BÀI LÀM: Phân biệt Word và Markdown khi lưu trữ tài liệu trên GitHub
+Phần 1. Phân tích
+1. Hai sai lầm trong tư duy của Nam
+Sai lầm 1: Cho rằng Word tốt hơn Markdown vì có nhiều công cụ định dạng trực quan.
+Word sử dụng định dạng Rich Text, cho phép chỉnh sửa font chữ, màu sắc, căn lề và bố cục bằng thanh công cụ. Tuy nhiên, tệp .docx có cấu trúc phức tạp, thường chứa XML, hình ảnh và các thành phần định dạng bên trong gói nén. Vì vậy, Git khó so sánh chính xác những thay đổi nhỏ giữa hai phiên bản.
+Ngược lại, Markdown là văn bản thuần (Plain Text) sử dụng các ký hiệu đơn giản như #, ** và - để định dạng nội dung. Git có thể hiển thị rõ dòng nào được thêm, sửa hoặc xóa. Markdown vẫn có thể tạo tài liệu chuyên nghiệp khi được hiển thị trên GitHub.
+Sai lầm 2: Cho rằng Markdown chỉ là văn bản thô, không phù hợp để viết tài liệu chuyên nghiệp.
+Markdown hỗ trợ tiêu đề, danh sách, bảng, liên kết, hình ảnh và khối mã nguồn. GitHub có thể tự động hiển thị tệp .md thành tài liệu dễ đọc ngay trên trình duyệt mà không cần tải về Word.
+Đối với tài liệu giới thiệu dự án, hướng dẫn cài đặt và README, Markdown thường phù hợp hơn vì dễ đọc, dễ chỉnh sửa và thuận tiện khi làm việc nhóm.
+2. Vì sao Markdown an toàn và nhẹ hơn?
+Tiêu chí
+Word (.docx)
+Markdown (.md)
+Bản chất
+Gói tài liệu có cấu trúc phức tạp
+Văn bản thuần
+Dung lượng
+Thường lớn hơn khi có nhiều định dạng, hình ảnh
+Thường nhẹ hơn với nội dung văn bản tương đương
+Git Diff
+Khó đọc chi tiết thay đổi bên trong tệp
+Dễ theo dõi từng dòng được sửa
+Git Conflict
+Khó xử lý khi các phiên bản cùng thay đổi
+Thường dễ xác định và hợp nhất các dòng xung đột
+Hiển thị trên GitHub
+Thường cần tải xuống hoặc dùng trình xem phù hợp
+Hiển thị trực tiếp trên trình duyệt
+
+Đối chiếu bẫy dữ liệu: Nếu mất một byte dữ liệu, tệp Word có thể bị hỏng cấu trúc hoặc không mở được, nhưng không phải lúc nào cũng hỏng hoàn toàn. Markdown cũng có thể mất một ký tự hoặc một phần nội dung, nhưng thường vẫn đọc được phần văn bản còn lại vì không phụ thuộc vào cấu trúc gói tài liệu phức tạp như .docx.
+Lưu ý: Markdown không tự bảo vệ dữ liệu khỏi lỗi mạng. Cả hai loại tệp đều cần tải lên hoàn tất, kiểm tra kết quả và sao lưu khi cần.
+Phần 2. Hoàn thiện: Chuyển Word sang Markdown bằng StackEdit
+1. Đoạn giới thiệu dự án mẫu
+Có thể sử dụng đoạn giới thiệu sau để thực hành chuyển đổi:
+Giới thiệu dự án
+1. Mục tiêu
+Dự án được thực hiện nhằm xây dựng một ứng dụng hỗ trợ người dùng quản lý thông tin và nâng cao hiệu quả học tập.
+2. Công nghệ sử dụng
+Ngôn ngữ lập trình: Python
+Quản lý mã nguồn: Git và GitHub
+Tài liệu dự án: Markdown
+3. Kết quả mong đợi
+Hoàn thiện các chức năng cơ bản của ứng dụng.
+Viết tài liệu hướng dẫn sử dụng rõ ràng.
+Hỗ trợ các thành viên phối hợp và cập nhật dự án thuận tiện hơn.
+2. Các bước thực hiện trên StackEdit
+
+Bước 1: Mở StackEdit
+Truy cập StackEdit bằng trình duyệt.
+
+Bước 2: Nhập nội dung
+Mở tài liệu Word, sao chép phần giới thiệu dự án rồi chuyển nội dung sang vùng soạn thảo của StackEdit. Chỉnh lại tiêu đề, danh sách và chữ in đậm bằng cú pháp Markdown.
+
+Bước 3: Xuất tệp .md
+Mở menu của StackEdit, tìm chức năng xuất hoặc tải xuống Markdown (tên mục có thể thay đổi theo phiên bản), sau đó lưu tệp với tên README.md hoặc gioi-thieu-du-an.md.
+3. Nội dung Markdown sau khi chuyển đổi
+Bạn có thể sao chép đoạn mã dưới đây và lưu thành tệp gioi-thieu-du-an.md:
+# Giới thiệu dự án
+
+## 1. Mục tiêu
+
+Dự án được thực hiện nhằm xây dựng một ứng dụng hỗ trợ người dùng quản lý thông tin và nâng cao hiệu quả học tập.
+
+## 2. Công nghệ sử dụng
+
+- **Ngôn ngữ lập trình:** Python
+- **Quản lý mã nguồn:** Git và GitHub
+- **Tài liệu dự án:** Markdown
+
+## 3. Kết quả mong đợi
+
+- Hoàn thiện các chức năng cơ bản của ứng dụng.
+- Viết tài liệu hướng dẫn sử dụng rõ ràng.
+- Hỗ trợ các thành viên phối hợp và cập nhật dự án thuận tiện hơn.
+Sao chép nội dung Markdown
+Kết luận: Word phù hợp khi cần trình bày văn bản với bố cục phức tạp, còn Markdown phù hợp để viết tài liệu dự án trên GitHub vì nhẹ, dễ đọc, dễ theo dõi thay đổi và thuận tiện khi làm việc nhóm.
+
